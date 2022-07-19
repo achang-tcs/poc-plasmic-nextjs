@@ -6,7 +6,7 @@ export interface SliderProps {
 }
 
 export function Slider({ className, verbose }: SliderProps) {
-  const [value, setValue] = useState('5');
+  const [value, setValue] = useState('50');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -21,9 +21,9 @@ export function Slider({ className, verbose }: SliderProps) {
         onChange={handleInputChange}
         value={value}
         min="0"
-        max="10"
-        step="0.1"
+        max="100"
       />
+      {value}
     </div>
   );
 }
